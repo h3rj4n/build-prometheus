@@ -1,0 +1,22 @@
+kind: pipeline
+name: default
+
+platform:
+  os: linux
+  arch: arm64
+
+steps:
+- name: build
+  image: plugins/docker:linux-arm64
+  settings:
+    repo: h3rj4n/prometheus
+    tags:
+      - latest
+      - '2.7.0-rc.1'
+    build_args:
+      - VERSION=2.7.0-rc.1
+    #dry-run: true
+    username:
+      from_secret: docker_username
+    password:
+      from_secret: docker_password
