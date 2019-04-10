@@ -12,9 +12,9 @@ steps:
     repo: h3rj4n/prometheus
     tags:
       - latest
-      - '2.8.0'
+      - '2.8.1'
     build_args:
-      - VERSION=2.8.0
+      - VERSION=2.8.1
     #dry-run: true
     username:
       from_secret: docker_username
